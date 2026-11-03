@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Каталог товаров учебного интернет-магазина.">
+  <title>Каталог товаров — Учебный интернет-магазин</title>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Учебный интернет-магазин">
+  <meta property="og:description" content="Учебный frontend-проект интернет-магазина.">
+  <meta property="og:image" content="https://username.github.io/kr1-html-css-shop/images/preview.jpg">
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-dark" href="index.html">МАГАЗИН ФИГУРОК</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+        <li class="nav-item"><a class="nav-link active" href="catalog.html">Каталог</a></li>
+        <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+        <li class="nav-item"><a class="nav-link" href="product.html">Товар (пример)</a></li>
+        <li class="nav-item"><a class="nav-link" href="order.html">Оформить заказ</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="container mt-4">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Каталог</li>
+      </ol>
+    </nav>
+  </div>
+
+  <div class="container mb-5">
+    <div class="p-5 rounded-4 text-center" style="background: linear-gradient(135deg, #fff5f8, #f7eef1);">
+      <h1 class="display-4 fw-bold">Каталог товаров</h1>
+      <p class="lead text-muted mb-0">
+        Выберите идеальную фигурку для своей коллекции
+      </p>
+    </div>
+  </div>
+
+<div class="container my-5">
+  <div class="row g-4">
+    <aside class="col-md-3">
+      <div class="card shadow-sm border-0">
+        <div class="card-body">
+          <h4 class="card-title mb-4">Фильтры</h4>
+          <form id="price-filter-form">
+            <div class="mb-3">
+              <label class="form-label fw-bold">Цена</label>
+              <div class="input-group mb-2">
+                <span class="input-group-text">От</span>
+                <input type="number" class="form-control" id="price-from" placeholder="0" min="0">
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text">До</span>
+                <input type="number" class="form-control" id="price-to" placeholder="50000" min="0">
+              </div>
+              <label class="form-label fw-bold">Валюта</label>
+              <select class="form-select" id="price-currency">
+                <option value="RUB">В рублях (по курсу)</option>
+                <option value="CNY">В юанях (CNY)</option>
+                <option value="JPY">В йенах (JPY)</option>
+              </select>
+            </div>
+            <button class="btn btn-primary w-100" type="submit">Применить</button>
+          </form>
+          
+        </div>
+      </div>
+    </aside>
+    <section class="col-md-9">
+      <h2 class="mb-4">Список товаров</h2>
+      
+      <div class="alert alert-info" role="alert">
+        <i class="bi bi-info-circle"></i> Цены в юанях и йенах пересчитываются по актуальному курсу!
+      </div>
+
+      <div class="d-flex flex-wrap gap-2 mb-4" id="filter-buttons">
+        <button type="button" class="btn btn-outline-primary active" data-filter="all">Все</button>
+        <button type="button" class="btn btn-outline-primary" data-filter="complete">Complete</button>
+        <button type="button" class="btn btn-outline-primary" data-filter="statue">Statue</button>
+        <button type="button" class="btn btn-outline-primary" data-filter="nendoroid">Nendoroid</button>
+      </div>
+
+      <div class="row g-4">
+        
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm border-0">
+        <img src="images/kuricha-maid.jpg" class="card-img-top object-fit-cover" style="height: 250px;" alt="Kuricha Maid">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Kuricha Maid</h5>
+          <span class="badge bg-secondary mb-2 align-self-start">Предзаказ</span>
+          <p class="card-text text-muted small mb-3">
+            Производитель: Poi Art<br>
+            Размер: 1/6<br>
+            Релиз: 4 квартал 2026
+          </p>
+          
+          <div class="mt-auto" data-price="799" data-currency="CNY" data-category="complete">
+            <p class="card-text fw-bold mb-3">Цена: 799 юаней <span class="product-card__price-rub text-danger"></span></p>
+            <button type="button" class="btn btn-primary w-100 product-card__button" data-bs-toggle="modal" data-bs-target="#orderModal" data-product="Kuricha Maid">Заказать</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm border-0">
+        <img src="images/kangel.jpg" class="card-img-top object-fit-cover" style="height: 250px;" alt="KAngel">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">KAngel</h5>
+          <span class="badge bg-secondary mb-2 align-self-start">Предзаказ</span>
+          <p class="card-text text-muted small mb-3">
+            Производитель: GSC<br>
+            Размер: 1/7, 23 см<br>
+            Релиз: Февраль 2027
+          </p>
+          
+          <div class="mt-auto" data-price="19800" data-currency="JPY" data-category="complete">
+            <p class="card-text fw-bold mb-3">Цена: 19 800 йен <span class="product-card__price-rub text-danger"></span></p>
+            <button type="button" class="btn btn-primary w-100 product-card__button" data-bs-toggle="modal" data-bs-target="#orderModal" data-product="KAngel">Заказать</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm border-0">
+        <img src="images/saya.jpg" class="card-img-top object-fit-cover" style="height: 250px;" alt="Saya">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Saya</h5>
+          <span class="badge bg-secondary mb-2 align-self-start">Предзаказ</span>
+          <p class="card-text text-muted small mb-3">
+            Производитель: Magi Arts<br>
+            Размер: 1/6, 28 см<br>
+            Релиз: Февраль 2027
+          </p>
+          
+          <div class="mt-auto" data-price="999" data-currency="CNY" data-category="complete">
+            <p class="card-text fw-bold mb-3">Цена: 999 юаней <span class="product-card__price-rub text-danger"></span></p>
+            <button type="button" class="btn btn-primary w-100 product-card__button" data-bs-toggle="modal" data-bs-target="#orderModal" data-product="Saya">Заказать</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm border-0">
+        <img src="images/kangel-anniv.jpg" class="card-img-top object-fit-cover" style="height: 250px;" alt="KAngel Anniv">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">KAngel: Anniv. Ver.</h5>
+          <span class="badge bg-secondary mb-2 align-self-start">Вышла в релиз</span>
+          <p class="card-text text-muted small mb-3">
+            Производитель: GSC<br>
+            Размер: 1/7<br>
+            Релиз: Июль 2026
+          </p>
+          
+          <div class="mt-auto" data-price="22000" data-currency="JPY" data-category="complete">
+            <p class="card-text fw-bold mb-3">Цена: 22 000 йен <span class="product-card__price-rub text-danger"></span></p>
+            <button type="button" class="btn btn-primary w-100 product-card__button" data-bs-toggle="modal" data-bs-target="#orderModal" data-product="KAngel Anniv">Заказать</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm border-0">
+        <img src="images/a-z-b.jpg" class="card-img-top object-fit-cover" style="height: 250px;" alt="A-Z(B)">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">A-Z:[B]</h5>
+          <span class="badge bg-secondary mb-2 align-self-start">Вышла в релиз</span>
+          <p class="card-text text-muted small mb-3">
+            Производитель: Myethos<br>
+            Размер: 1/7<br>
+            Релиз: Август 2025
+          </p>
+          
+          <div class="mt-auto" data-price="698" data-currency="CNY" data-category="complete">
+            <p class="card-text fw-bold mb-3">Цена: 698 юаней <span class="product-card__price-rub text-danger"></span></p>
+            <button type="button" class="btn btn-primary w-100 product-card__button" data-bs-toggle="modal" data-bs-target="#orderModal" data-product="A-Z(B)">Заказать</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm border-0">
+        <img src="images/ame.jpg" class="card-img-top object-fit-cover" style="height: 250px;" alt="Ame">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Ame</h5>
+          <span class="badge bg-secondary mb-2 align-self-start">Вышла в релиз</span>
+          <p class="card-text text-muted small mb-3">
+            Производитель: Apex-Toys<br>
+            Размер: 1/7, 27.5 см<br>
+            Релиз: Октябрь 2026
+          </p>
+          
+          <div class="mt-auto" data-price="799" data-currency="CNY" data-category="complete">
+            <p class="card-text fw-bold mb-3">Цена: 799 юаней <span class="product-card__price-rub text-danger"></span></p>
+            <button type="button" class="btn btn-primary w-100 product-card__button" data-bs-toggle="modal" data-bs-target="#orderModal" data-product="Ame">Заказать</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm border-0">
+        <img src="images/soft-summer-mia.jpg" class="card-img-top object-fit-cover" style="height: 250px;" alt="Mia">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Mia</h5>
+          <span class="badge bg-secondary mb-2 align-self-start">Предзаказ</span>
+          <p class="card-text text-muted small mb-3">
+            Производитель: Apex-Toys<br>
+            Размер: 1/6, 26.5 см<br>
+            Релиз: Июль 2027
+          </p>
+          
+          <div class="mt-auto" data-price="799" data-currency="CNY" data-category="complete">
+            <p class="card-text fw-bold mb-3">Цена: 799 юаней <span class="product-card__price-rub text-danger"></span></p>
+            <button type="button" class="btn btn-primary w-100 product-card__button" data-bs-toggle="modal" data-bs-target="#orderModal" data-product="Mia">Заказать</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm border-0">
+        <img src="images/Misato-statue.jpg" class="card-img-top object-fit-cover" style="height: 250px;" alt="Misato">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Misato</h5>
+          <span class="badge bg-secondary mb-2 align-self-start">Предзаказ</span>
+          <p class="card-text text-muted small mb-3">
+            Производитель: Quiet Art Studio<br>
+            Размер: 1/6, 30 см<br>
+            Тираж: 99 копий<br>
+            Релиз: 2 квартал 2027
+          </p>
+          
+          <div class="mt-auto" data-price="1388" data-currency="CNY" data-category="statue">
+            <p class="card-text fw-bold mb-3">Цена: 1388 юаней <span class="product-card__price-rub text-danger"></span></p>
+            <button type="button" class="btn btn-primary w-100 product-card__button" data-bs-toggle="modal" data-bs-target="#orderModal" data-product="Misato">Заказать</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm border-0">
+        <img src="images/Akame.jpg" class="card-img-top object-fit-cover" style="height: 250px;" alt="Akame">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Akame</h5>
+          <span class="badge bg-secondary mb-2 align-self-start">Предзаказ</span>
+          <p class="card-text text-muted small mb-3">
+            Производитель: PG Studio × Dazzle Studio<br>
+            Размер: 32 см<br>
+            Тираж: 99 копий<br>
+            Релиз: 1 квартал 2027
+          </p>
+          
+          <div class="mt-auto" data-price="1088" data-currency="CNY" data-category="statue">
+            <p class="card-text fw-bold mb-3">Цена: 1088 юаней <span class="product-card__price-rub text-danger"></span></p>
+            <button type="button" class="btn btn-primary w-100 product-card__button" data-bs-toggle="modal" data-bs-target="#orderModal" data-product="Akame">Заказать</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm border-0">
+        <img src="images/Esdese.jpg" class="card-img-top object-fit-cover" style="height: 250px;" alt="Esdese">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Esdese</h5>
+          <span class="badge bg-secondary mb-2 align-self-start">Предзаказ</span>
+          <p class="card-text text-muted small mb-3">
+            Производитель: PG Studio × Dazzle Studio<br>
+            Размер: 32 см<br>
+            Тираж: 99 копий<br>
+            Релиз: 1 квартал 2027
+          </p>
+          
+          <div class="mt-auto" data-price="1088" data-currency="CNY" data-category="statue">
+            <p class="card-text fw-bold mb-3">Цена: 1088 юаней <span class="product-card__price-rub text-danger"></span></p>
+            <button type="button" class="btn btn-primary w-100 product-card__button" data-bs-toggle="modal" data-bs-target="#orderModal" data-product="Esdese">Заказать</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm border-0">
+        <img src="images/makima-statue.jpg" class="card-img-top object-fit-cover" style="height: 250px;" alt="Makima">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Makima</h5>
+          <span class="badge bg-secondary mb-2 align-self-start">Предзаказ</span>
+          <p class="card-text text-muted small mb-3">
+            Производитель: LiYue Studio<br>
+            Размер: 1/6, 28 см<br>
+            Тираж: 100 копий<br>
+            Релиз: 4 квартал 2026
+          </p>
+          
+          <div class="mt-auto" data-price="1588" data-currency="CNY" data-category="statue">
+            <p class="card-text fw-bold mb-3">Цена: 1588 юаней <span class="product-card__price-rub text-danger"></span></p>
+            <button type="button" class="btn btn-primary w-100 product-card__button" data-bs-toggle="modal" data-bs-target="#orderModal" data-product="Makima">Заказать</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm border-0">
+        <img src="images/blue-archive-set.jpg" class="card-img-top object-fit-cover" style="height: 250px;" alt="Blue Archive">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Сет фигурок Blue Archive</h5>
+          <span class="badge bg-secondary mb-2 align-self-start">Предзаказ</span>
+          <p class="card-text text-muted small mb-3">
+            Производитель: GSC<br>
+            Размер: 7 см<br>
+            Релиз: Январь  2027
+          </p>
+          
+          <div class="mt-auto" data-price="10800" data-currency="JPY" data-category="nendoroid">
+            <p class="card-text fw-bold mb-3">Цена: 10800 йен <span class="product-card__price-rub text-danger"></span></p>
+            <button type="button" class="btn btn-primary w-100 product-card__button" data-bs-toggle="modal" data-bs-target="#orderModal" data-product="Blue Archive">Заказать</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm border-0">
+        <img src="images/reze-nendoroid.jpg" class="card-img-top object-fit-cover" style="height: 250px;" alt="Reze nend">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Reze Nendoroid</h5>
+          <span class="badge bg-secondary mb-2 align-self-start">Вышла в релиз</span>
+          <p class="card-text text-muted small mb-3">
+            Производитель: GSC<br>
+            Релиз: Август 2026
+          </p>
+          
+          <div class="mt-auto" data-price="3900" data-currency="JPY" data-category="nendoroid">
+            <p class="card-text fw-bold mb-3">Цена: 3900 йен <span class="product-card__price-rub text-danger"></span></p>
+            <button type="button" class="btn btn-primary w-100 product-card__button" data-bs-toggle="modal" data-bs-target="#orderModal" data-product="Reze nend">Заказать</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm border-0">
+        <img src="images/nagito.jpg" class="card-img-top object-fit-cover" style="height: 250px;" alt="Nagito nend">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Nagito Nendoroid</h5>
+          <span class="badge bg-secondary mb-2 align-self-start">Вышла в релиз</span>
+          <p class="card-text text-muted small mb-3">
+            Производитель: GSC<br>
+            Релиз: Август 2026
+          </p>
+          
+          <div class="mt-auto" data-price="3900" data-currency="JPY" data-category="nendoroid">
+            <p class="card-text fw-bold mb-3">Цена: 3900 йен <span class="product-card__price-rub text-danger"></span></p>
+            <button type="button" class="btn btn-primary w-100 product-card__button" data-bs-toggle="modal" data-bs-target="#orderModal" data-product="Nagito nend">Заказать</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm border-0">
+        <img src="images/homura.jpg" class="card-img-top object-fit-cover" style="height: 250px;" alt="Homura nend">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Homura Nendoroid</h5>
+          <span class="badge bg-secondary mb-2 align-self-start">Вышла в релиз</span>
+          <p class="card-text text-muted small mb-3">
+            Производитель: GSC<br>
+            Релиз: Август 2026
+          </p>
+          
+          <div class="mt-auto" data-price="3900" data-currency="JPY" data-category="nendoroid">
+            <p class="card-text fw-bold mb-3">Цена: 3900 йен <span class="product-card__price-rub text-danger"></span></p>
+            <button type="button" class="btn btn-primary w-100 product-card__button" data-bs-toggle="modal" data-bs-target="#orderModal" data-product="Homura nend">Заказать</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm border-0">
+        <img src="images/puniru.jpg" class="card-img-top object-fit-cover" style="height: 250px;" alt="Puniru nend">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Puniru Nendoroid</h5>
+          <span class="badge bg-secondary mb-2 align-self-start">Вышла в релиз</span>
+          <p class="card-text text-muted small mb-3">
+            Производитель: GSC<br>
+            Релиз: Сентябрь 2025
+          </p>
+          
+          <div class="mt-auto" data-price="4400" data-currency="JPY" data-category="nendoroid">
+            <p class="card-text fw-bold mb-3">Цена: 4400 йен <span class="product-card__price-rub text-danger"></span></p>
+            <button type="button" class="btn btn-primary w-100 product-card__button" data-bs-toggle="modal" data-bs-target="#orderModal" data-product="Puniru nend">Заказать</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+</main>
+
+    <footer class="site-footer">
+    <div class="site-footer__inner">
+        <p>&copy; 2026 Учебный проект. Все права защищены.</p>
+        <p>Дисциплина: Фронтенд и бэкенд разработка</p>
+    </div>
+    </footer>
+
+<div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0 shadow">
+      <div class="modal-header bg-light border-0">
+        <h5 class="modal-title fw-bold" id="orderModalLabel">Оформление заявки</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+      </div>
+      <div class="modal-body p-4">
+        <form>
+          <div class="mb-3">
+            <label for="modal-name" class="form-label">Имя</label>
+            <input type="text" class="form-control" id="modal-name" required>
+          </div>
+          <div class="mb-3">
+            <label for="modal-product" class="form-label">Выбранный товар</label>
+            <select class="form-select" id="modal-product" name="product" required>
+              <option value="" disabled selected>Выберите фигурку...</option>
+              <option value="Kuricha Maid">Kuricha Maid</option>
+              <option value="KAngel">KAngel</option>
+              <option value="Saya">Saya</option>
+              <option value="KAngel Anniv">KAngel: Anniv. Ver.</option>
+              <option value="A-Z(B)">A-Z:[B]</option>
+              <option value="Ame">Ame</option>
+              <option value="Mia">Mia</option>
+              <option value="Misato">Misato</option>
+              <option value="Akame">Akame</option>
+              <option value="Esdese">Esdese</option>
+              <option value="Makima">Makima</option>
+              <option value="Blue Archive">Сет фигурок Blue Archive</option>
+              <option value="Reze nend">Reze Nendoroid</option>
+              <option value="Nagito nend">Nagito Nendoroid</option>
+              <option value="Homura nend">Homura Nendoroid</option>
+              <option value="Puniru nend">Puniru Nendoroid</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary w-100 mt-3">Отправить заявку</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div id="filterToast" class="toast align-items-center text-white bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="d-flex">
+      <div class="toast-body">
+        Фильтры применены!
+      </div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Закрыть"></button>
+    </div>
+  </div>
+</div>
+</body>
+</html>

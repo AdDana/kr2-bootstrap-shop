@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Учебный интернет-магазин</title>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Учебный интернет-магазин">
+  <meta property="og:description" content="Учебный frontend-проект интернет-магазина.">
+  <meta property="og:image" content="https://username.github.io/kr1-html-css-shop/images/preview.jpg">
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body class="page-home">
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-dark" href="index.html">МАГАЗИН ФИГУРОК</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Главная</a></li>
+        <li class="nav-item"><a class="nav-link" href="catalog.html">Каталог</a></li>
+        <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+        <li class="nav-item"><a class="nav-link" href="product.html">Товар (пример)</a></li>
+        <li class="nav-item"><a class="nav-link" href="order.html">Оформить заказ</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <main>
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1 class="display-1 fw-bold">МАГАЗИН<br>ФИГУРОК</h1>
+      <p class="lead mb-4">Коллекционные фигурки из Японии и Китая с доставкой по России.</p>
+      <a class="btn btn-primary btn-lg px-5 py-3 rounded-pill" href="catalog.html">Перейти в каталог</a>
+    </div>
+  </section>
+
+  <section class="triptych-section">
+    <a href="catalog.html" class="triptych-item" style="background-image: url('images/kuricha-maid.jpg');">
+      <div class="triptych-content">
+        <h2>Kuricha Maid</h2>
+        <span class="btn btn-light rounded-pill mt-3">Смотреть</span>
+      </div>
+    </a>
+    <a href="catalog.html" class="triptych-item" style="background-image: url('images/kangel.jpg');">
+      <div class="triptych-content">
+        <h2>KAngel</h2>
+        <span class="btn btn-light rounded-pill mt-3">Смотреть</span>
+      </div>
+    </a>
+    <a href="catalog.html" class="triptych-item" style="background-image: url('images/saya.jpg');">
+      <div class="triptych-content">
+        <h2>Saya</h2>
+        <span class="btn btn-light rounded-pill mt-3">Смотреть</span>
+      </div>
+    </a>
+  </section>
+
+  <section class="section full-screen-section d-flex align-items-center" id="advantages">
+    <div class="container text-center">
+      <h2 class="display-4 fw-bold mb-5">Почему мы?</h2>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-4">
+          <div class="p-4 bg-white rounded shadow-sm h-100">
+            <h4>Оригинал</h4>
+            <p class="text-muted">Только официальные поставки.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 bg-white rounded shadow-sm h-100">
+            <h4>Честный курс</h4>
+            <p class="text-muted">Пересчет по ЦБ РФ в реальном времени.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 bg-white rounded shadow-sm h-100">
+            <h4>Доставка</h4>
+            <p class="text-muted">Бережная упаковка и быстрая отправка.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="section full-screen-section d-flex flex-column justify-content-center" id="faq">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-4 display-5">Часто задаваемые вопросы</h2>
+    <div class="accordion custom-accordion" id="faqAccordion">
+
+      <div class="accordion-item border-0 mb-3 shadow-sm rounded">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed fw-bold bg-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+            Как происходит оплата?
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body text-muted">
+            Оплата происходит после подтверждения наличия товара и финального расчета в рублях по актуальному курсу ЦБ РФ.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item border-0 mb-3 shadow-sm rounded">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed fw-bold bg-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+            Сколько идет доставка?
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body text-muted">
+            Доставка из Японии и Китая занимает от 4 до 6 недель в зависимости от выбранного способа (EMS, авиадоставка).
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item border-0 shadow-sm rounded">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed fw-bold bg-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+            Фигурки оригинальные?
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body text-muted">
+            Да, мы работаем только с официальными дистрибьюторами и проверенными магазинами. Все фигурки новые, в заводской упаковке.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+  <footer class="site-footer" id="contacts">
+    <div class="site-footer__inner">
+      <p>&copy; 2026 Учебный проект. Все права защищены.</p>
+      <p>Дисциплина: Фронтенд и бэкенд разработка</p>
+    </div>
+  </footer>
+
+<div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0 shadow">
+      <div class="modal-header bg-light border-0">
+        <h5 class="modal-title fw-bold" id="orderModalLabel">Оформление заявки</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+      </div>
+      <div class="modal-body p-4">
+        <form>
+          <div class="mb-3">
+            <label for="modal-name" class="form-label">Имя</label>
+            <input type="text" class="form-control" id="modal-name" required>
+          </div>
+          <div class="mb-3">
+            <label for="modal-product" class="form-label">Выбранный товар</label>
+            <select class="form-select" id="modal-product" name="product" required>
+              <option value="" disabled selected>Выберите фигурку...</option>
+              <option value="Kuricha Maid">Kuricha Maid</option>
+              <option value="KAngel">KAngel</option>
+              <option value="Saya">Saya</option>
+              <option value="KAngel Anniv">KAngel: Anniv. Ver.</option>
+              <option value="A-Z(B)">A-Z:[B]</option>
+              <option value="Ame">Ame</option>
+              <option value="Mia">Mia</option>
+              <option value="Misato">Misato</option>
+              <option value="Akame">Akame</option>
+              <option value="Esdese">Esdese</option>
+              <option value="Makima">Makima</option>
+              <option value="Blue Archive">Сет фигурок Blue Archive</option>
+              <option value="Reze nend">Reze Nendoroid</option>
+              <option value="Nagito nend">Nagito Nendoroid</option>
+              <option value="Homura nend">Homura Nendoroid</option>
+              <option value="Puniru nend">Puniru Nendoroid</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary w-100 mt-3">Отправить заявку</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Каталог товаров учебного интернет-магазина.">
+  <title>Каталог товаров — Учебный интернет-магазин</title>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Учебный интернет-магазин">
+  <meta property="og:description" content="Учебный frontend-проект интернет-магазина.">
+  <meta property="og:image" content="https://username.github.io/kr1-html-css-shop/images/preview.jpg">
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-dark" href="index.html">МАГАЗИН ФИГУРОК</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+        <li class="nav-item"><a class="nav-link active" href="catalog.html">Каталог</a></li>
+        <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+        <li class="nav-item"><a class="nav-link" href="product.html">Товар (пример)</a></li>
+        <li class="nav-item"><a class="nav-link" href="order.html">Оформить заказ</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="container my-5">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+      <li class="breadcrumb-item"><a href="catalog.html">Каталог</a></li>
+      <li class="breadcrumb-item active">Kuricha Maid</li>
+    </ol>
+  </nav>
+
+  <div class="row g-5">
+    <div class="col-md-6">
+      <img src="images/kuricha-maid.jpg" class="img-fluid rounded shadow" alt="Kuricha Maid">
+    </div>
+    <div class="col-md-6">
+      <h1 class="display-5 fw-bold mb-3">Kuricha Maid</h1>
+      <span class="badge bg-primary fs-6 mb-4">Предзаказ</span>
+      
+      <h3 class="text-danger fw-bold mb-4" data-price="799" data-currency="CNY">
+        799 юаней <small class="text-muted fs-5 product-card__price-rub"></small>
+      </h3>
+      
+      <ul class="list-group mb-4 shadow-sm">
+        <li class="list-group-item d-flex justify-content-between"><span>Производитель:</span> <strong>Poi Art</strong></li>
+        <li class="list-group-item d-flex justify-content-between"><span>Масштаб:</span> <strong>1/6</strong></li>
+        <li class="list-group-item d-flex justify-content-between"><span>Релиз:</span> <strong>4 квартал 2026</strong></li>
+      </ul>
+      
+      <a href="order.html" class="btn btn-primary btn-lg w-100 shadow">Оформить заказ</a>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+    <div class="site-footer__inner">
+        <p>&copy; 2026 Учебный проект. Все права защищены.</p>
+        <p>Дисциплина: Фронтенд и бэкенд разработка</p>
+    </div>
+    </footer>
+
+</body>
+</html>
