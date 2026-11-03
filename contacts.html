@@ -34,31 +34,64 @@
 </nav>
 
   <main>
-    <nav class="breadcrumbs" aria-label="Хлебные крошки">
-      <a class="breadcrumbs__link" href="index.html">Главная</a>
-      <span class="breadcrumbs__current">Контакты</span>
-    </nav>
+    <div class="container mt-4">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Контакты</li>
+        </ol>
+      </nav>
+    </div>
 
-    <section class="section">
-      <h1>Контакты</h1>
-      <p>
-        Здесь размещается контактная информация учебного интернет-магазина.
-      </p>
+    <div class="container my-5">
+      <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold">Контакты</h1>
+        <p class="lead text-muted">Мы всегда на связи и готовы ответить на ваши вопросы</p>
+      </div>
 
-      <ul>
-        <li>Телефон: +7 (900) 000-00-00</li>
-        <li>E-mail: info@example.com</li>
-        <li>Адрес: г. Москва, учебный проект</li>
-      </ul>
-    </section>
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+          <div class="card shadow-sm border-0 rounded-4">
+            <div class="card-body p-4">
+              <h3 class="card-title fw-bold mb-4 text-center">Наши контакты</h3>
+              
+              <ul class="list-group list-group-flush mb-4">
+                <li class="list-group-item d-flex align-items-center">
+                  <span class="fs-4 me-3">❀</span>
+                  <div>
+                    <h6 class="mb-0 fw-bold">Телефон</h6>
+                    <a href="tel:+79000000000" class="text-decoration-none text-muted">+7 (900) 000-00-00</a>
+                  </div>
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                  <span class="fs-4 me-3">❀</span>
+                  <div>
+                    <h6 class="mb-0 fw-bold">E-mail</h6>
+                    <a href="mailto:info@example.com" class="text-decoration-none text-muted">info@example.com</a>
+                  </div>
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                  <span class="fs-4 me-3">❀</span>
+                  <div>
+                    <h6 class="mb-0 fw-bold">Адрес</h6>
+                    <span class="text-muted">г. Москва, учебный проект</span>
+                  </div>
+                </li>
+              </ul>
 
-    <section class="section" id="feedback">
-      <h2>Обратная связь</h2>
-      <p>
-        Для отправки заявки используйте форму в модальном окне на главной странице.
-      </p>
-      <a class="button button--primary" href="index.html#contacts">Перейти к форме</a>
-    </section>
+              <div class="text-center mt-4 pt-3 border-top">
+                <h5 class="fw-bold mb-3">Обратная связь</h5>
+                <p class="text-muted small mb-3">
+                  Для отправки заявки используйте форму в модальном окне на главной странице.
+                </p>
+                <a class="btn btn-primary w-100 py-2" href="index.html#contacts">Перейти к форме</a>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 
     <footer class="site-footer">
