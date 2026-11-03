@@ -42,7 +42,7 @@ Bootstrap подключен **локально** (без использован
 6. **Кастомная стилизация** — в `custom.css` переопределены цвета `--bs-primary`, стилизованы кнопки, карточки (добавлен эффект поднятия при наведении) и аккордеон.
 
 ## Ссылка на GitHub Pages
-https://username.github.io/kr2-bootstrap-shop/
+https://AdDana.github.io/kr2-bootstrap-shop/
 
 ## Автор
 ФИО: Аннинкова Дана Дмитриевна
